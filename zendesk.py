@@ -117,7 +117,7 @@ def generate():
     results.sort(key=lambda ticket: int(ticket["id"]))
     with open('results.json', 'w') as f:
         json.dump(results, f)
-    return render_template('index.html', data=(results, datetime.datetime.utcfromtimestamp(start_unix).strftime('%b %d, %Y %H:%M:%S'), datetime.datetime.utcfromtimestamp(end_unix).strftime('%b %d, %Y %H:%M:%S')))
+    return render_template('index.html', data=(results, datetime.datetime.utcfromtimestamp(start_unix).strftime('%b %d, %Y %H:%M:%S'), datetime.datetime.utcfromtimestamp(end_unix).strftime('%b %d, %Y %H:%M:%S'), subdomain))
 
 
 if __name__ == "__main__":
