@@ -54,7 +54,7 @@ def processTickets(results, ticketlist):
         created_time = calendar.timegm(datetime.datetime.strptime(
             ticket["created_at"], '%Y-%m-%dT%H:%M:%SZ').timetuple())
 
-        if start_unix <= created_time <= end_unix:
+        if start_unix <= created_time < end_unix:
             results.append(
                 {"id": ticket['id'], "subject": ticket["subject"], "description": ticket['description'], "created_at": datetime.datetime.utcfromtimestamp(created_time).strftime('%b %d, %Y %H:%M:%S')})
     return results
