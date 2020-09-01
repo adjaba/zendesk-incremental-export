@@ -1,4 +1,4 @@
-Python command line tool to view Zendesk tickets created between two times (start inclusive, end exclusive) using the incremental export API, also generates results.json in the directory it is run.
+Python command line tool to view Zendesk tickets created between two times (start inclusive, end exclusive) using the incremental export API, also generates results.json in the directory it is run. Tickets are sorted by increasing created_at time.
 
 To run:
 `python zendesk.py <email address> <API key> <Zendesk subdomain>`
