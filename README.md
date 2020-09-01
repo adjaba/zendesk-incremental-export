@@ -1,7 +1,11 @@
-In order for us to more concretely understand your approach to coding and implementation, please complete the following implementation exercise. Please implement your solution as an executable program which can be run from a Linux or Mac command line and is written in Python, Scala, or Java.
+Python command line tool to view Zendesk tickets created between two times (inclusive) using the incremental export API. 
 
-Please implement an executable program that extracts from a Zendesk account (via the Zendesk API) select fields (specified below) of all tickets created between 15-12-2019 12:00 PM UTC (inclusive) and 10-01-2020 12:00PM UTC (exclusive). I
+To run: 
+```python zendesk.py <username> <API key> <Zendesk subdomain>```
 
-In particular, assume that you are given a subdomain, email address, and API token for a Zendesk account, as specified here. Create a program that outputs to a file (in a format of your choice) the id, subject, description, and created_at fields of each ticket created within the aforementioned time range; the output tickets should be sorted by increasing created_at time. In order to extract tickets from Zendesk, use Zendesk's incremental export API, and ensure that your implementation respects all applicable Zendesk rate limits (assuming the Team Zendesk plan).
+By default, it launches a website that shows tickets created from Dec 15, 2019 12:00:00 UTC to Jan 10, 2020 12:00:00 UTC.
 
-Bonus: Build a UI functionality. Feel free to use the framework of your choice.
+Files:
+- zendesk.py - Python script and Flask backend
+- templates/index.html - HTML/CSS/Bootstrap frontend
+- populate.py - To populate the Zendesk subdomain with data for testing
